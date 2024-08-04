@@ -1,0 +1,13 @@
+@import './mixins/index';
+@import './base/index';
+@import './components/header';
+@import './components/hero';
+
+@include font-face(SegoeUI, 'SegoeUI', 400);
+@include font-face(SegoeUI-Bold, 'SegoeUI-Bold', 400);
+@include font-face(SegoeUI-SemiBold, 'SegoeUI-SemiBold', 600);
+@include font-face(Benzin-ExtraBold, 'Benzin-ExtraBold', 400);
+
+@import './globals/index';
+
+

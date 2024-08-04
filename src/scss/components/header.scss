@@ -1,0 +1,60 @@
+.header {
+  padding: 30px 0;
+  &__container {
+    @include flex-justify-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--main-color-2);
+    
+  }
+
+  &__menu-list {
+    @include flex-justify-center;
+    gap: 44px;
+    transition: left var(--transition);
+  }
+  @include tablet {
+    &__menu-list {
+      @include flex-column;
+      position: fixed;
+      background: var(--main-color-3);
+      top: 0;
+      bottom: 0dvh;
+      right: 0;
+      left: 100dvw;
+      z-index: var(--z-index-4);
+      text-align: center;
+      gap: 32px;
+      justify-content: start;
+      padding-top: 220px;
+    }
+    .burger-open {
+      left: 60dvw;
+    }
+  }
+
+  @include mobile{
+    .burger-open{
+      left: 45dvw;
+
+    }
+  }
+  @include small-mobile{
+    .burger-open{
+      left: 30dvw;
+    }
+  }
+  &__menu-link {
+    font-family: var(--main-font);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--main-color-2);
+    white-space: nowrap;
+  }
+}

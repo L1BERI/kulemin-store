@@ -16,26 +16,26 @@ cards.forEach(el => {
     el.addEventListener('mouseover', function(e){
         
         if(el.querySelector('.first-swiper-cards')){
-            swiperFirst.slideNext();
+            swiperFirst.slideNext;
         }
         if(el.querySelector('.second-swiper-cards')){
-            swiperSecond.slideNext();
+            swiperSecond.slideNext;
         }
         if(el.querySelector('.thirst-swiper-cards')){
-            swiperThirst.slideNext();
+            swiperThirst.slideNext;
         }
 
     })
     el.addEventListener('mouseout', function(e){
         
         if(el.querySelector('.first-swiper-cards')){
-            swiperFirst.slidePrev();
+            swiperFirst.slidePrev;
         }
         if(el.querySelector('.second-swiper-cards')){
-            swiperSecond.slidePrev();
+            swiperSecond.slidePrev;
         }
         if(el.querySelector('.thirst-swiper-cards')){
-            swiperThirst.slidePrev();
+            swiperThirst.slidePrev;
         }
     })
     

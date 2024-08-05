@@ -81,6 +81,7 @@
 
   &__bottom-cards-list {
     display: flex;
+    
     gap: 12px;
     @include tablet{
       gap: 40px;
@@ -88,6 +89,9 @@
 
     @include small-tablet{
       gap: 12px;
+    }
+    @include mobile{
+      display: none;
     }
   }
 
@@ -245,4 +249,42 @@
     letter-spacing: 0.05em;
     line-height: 1.42;
   }
+
+
+  .splide__slide{
+    color: black;
+    
+  }
+
+  .splide__list{
+    max-width: 200px;
+    height: 260px;
+    align-items: center;
+    .hero__bottom-cards-item{
+      &::before{
+        display: none;
+      }
+    }
+  }
+.splide{
+  display: none;
+}
+.splide__arrow{
+  width: 50px;
+  height: 50px;
+  @include mobile{
+    top: 110%;
+  }
+  &--next{
+    @include mobile{
+      right: 35%
+    }
+  }
+  &--prev{
+    @include mobile{
+      left: 35%
+    }
+  }
+}
+
 }

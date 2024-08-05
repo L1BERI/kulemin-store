@@ -3,7 +3,7 @@
   padding-bottom: 108px;
 
   @include mobile {
-    padding: 22px 0 48px;
+    padding: 22px 0 40px;
   }
 
   
@@ -77,6 +77,9 @@
     @include small-tablet{
       padding-top: 80px;
     }
+    @include mobile{
+      padding-top: 40px;
+    }
   }
 
   &__bottom-cards-list {
@@ -88,6 +91,8 @@
 
     @include small-tablet{
       gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -206,6 +211,7 @@
     font-weight: 400;
     letter-spacing: 0.05em;
     color: var(--main-color-2);
+    max-width: 211px;
   }
   &__bottom-cards-desc{
     .cards-circle{
@@ -218,7 +224,8 @@
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.05em;
-    color: #000;
+    color: var(--main-color-2);
+  
   }
   &__bottom-cards-title,
   &__bottom-info-title,

@@ -2,6 +2,7 @@
 @import './base/index';
 @import './components/header';
 @import './components/hero';
+@import './components/about';
 
 @include font-face(SegoeUI, 'SegoeUI', 400);
 @include font-face(SegoeUI-Bold, 'SegoeUI-Bold', 400);

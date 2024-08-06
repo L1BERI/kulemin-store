@@ -63,45 +63,48 @@ label {
   cursor: pointer;
 }
 
-.wrapper{
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    position: relative;
-    background: var(--main-color-3);  
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  background: var(--main-color-3);
 }
 .container {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
-
-  
 }
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
 .hidden {
   font-size: 0;
   opacity: 0;
   visibility: hidden;
 }
 
-.visible{
-    opacity: 1;
-    visibility: visible;
+.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
-.overlay{
-    position: fixed;
-    inset: 0;
-    z-index: var(--z-index-4);
-    background: #333333af;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition), visibility var(--transition);
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-4);
+  background: #333333af;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
 }

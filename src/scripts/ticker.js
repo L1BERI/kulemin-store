@@ -19,12 +19,14 @@ const tickerSwiper = new Swiper('.ticker__swiper', {
   loop: true,
   slidesPerView: 1,
   speed: 3000,
+  spaceBetween: 50,
+  
   autoplay: {
     delay: 0,
   },
   breakpoints: {
     1300: {
-      slidesPerView: 4.2,
+      slidesPerView: 5,
     },
     992: {
       slidesPerView: 3,

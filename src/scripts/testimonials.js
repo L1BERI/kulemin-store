@@ -7,6 +7,7 @@ const testimonialsSwiper = new Swiper('.testimonials__swiper',{
     modules: [Autoplay, Scrollbar],
     slidesPerView: 1.2,
     spaceBetween: 35,
+    slidesPerGroup: 3,
     scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,

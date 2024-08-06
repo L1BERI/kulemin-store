@@ -1,9 +1,12 @@
 .order {
   padding-bottom: 140px;
-    padding: 0 15px;
-    @include mobile{
-     padding: 0 5px;   
-    }
+  padding-left: 15px;
+  padding-right: 15px;
+  @include mobile {
+      padding-left: 5px;
+      padding-right: 5px;
+    
+  }
   &__container {
     @include flex-align-center;
     background: url('./../assets/content/images/order-background.jpg') no-repeat;
@@ -12,14 +15,13 @@
     border-radius: 30px;
     overflow: hidden;
     gap: 92px;
-    @include tablet{
-        padding: 50px 50px 70px 50px;
-        gap: 40px;
+    @include tablet {
+      padding: 50px 50px 70px 50px;
+      gap: 40px;
     }
-    @include small-tablet{
-        flex-direction: column-reverse;
+    @include small-tablet {
+      flex-direction: column-reverse;
     }
-    
   }
 
   &__form {
@@ -30,8 +32,8 @@
     background: rgba(246, 247, 242, 0.2);
     @include flex-column;
     gap: 40px;
-    @include mobile{
-        padding: 52px 50px 55px 50px;
+    @include mobile {
+      padding: 52px 50px 55px 50px;
     }
     input {
       font-family: var(--main-font);
@@ -80,7 +82,7 @@
   }
 
   &__form-btn-send {
-    padding: 5px 55px 6px 55px;
+    padding: 10px 55px;
     border-radius: 10px;
     font-family: var(--main-font);
     font-weight: 600;
@@ -114,8 +116,8 @@
     line-height: 1.42;
     color: var(--main-color-3);
     text-align: center;
-    @include tablet{
-        font-size: 16px;
+    @include tablet {
+      font-size: 16px;
     }
   }
 }

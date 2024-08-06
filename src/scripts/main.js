@@ -4,6 +4,7 @@ import './collection';
 import './testimonials';
 import './ticker';
 import './order';
+import './smothShownElements';
 import { mouseMoveTranform } from './mousemove';
 import '../scss/main.scss';
 

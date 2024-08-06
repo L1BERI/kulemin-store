@@ -1,0 +1,93 @@
+.footer {
+  padding: 60px 0;
+  background: var(--main-color-2);
+
+  &__container {
+    @include flex-align-center;
+    justify-content: space-between;
+    @include tablet{
+        gap: 50px;
+        flex-direction: column;
+    }
+  }
+  &__information {
+    @include flex-column;
+    gap: 5px;
+  }
+
+  &__title {
+    font-family: var(--second-font);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+    color: var(--main-color-3);
+    @include tablet{
+        text-align: center;
+    }
+  }
+
+  &__text {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 1.42;
+    color: var(--main-color-3);
+    @include tablet{
+        text-align: center;
+    }
+  }
+
+  &__contacts {
+    @include flex-column;
+    gap: 24px;
+  }
+  &__contacts-title {
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: var(--main-color-3);
+    @include tablet{
+        text-align: center;
+    }
+  }
+  &__contacts-list {
+    @include flex-align-center;
+    gap: 55px;
+    @include mobile{
+        flex-direction: column;
+        align-items: start;
+    }
+  }
+
+  &__contacts-link {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.42;
+    color: var(--main-color-3);
+    @include flex-align-center;
+    gap: 12px;
+
+    span{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity var(--transition), visibility var(--transition);
+    }
+    svg{
+        transform: translateX(0%);
+        transition:  transform var(--transition);
+    }
+    &:hover{
+        span{
+            opacity: 0;
+            visibility: hidden;
+        }
+        svg{
+            transform: translateX(150%);
+        }
+    }
+  }
+}

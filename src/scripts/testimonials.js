@@ -14,6 +14,7 @@ const testimonialsSwiper = new Swiper('.testimonials__swiper',{
     },
     autoplay:{
         delay: 3000,
+        pauseOnMouseEnter: true,
     },
     breakpoints:{
         1200:{

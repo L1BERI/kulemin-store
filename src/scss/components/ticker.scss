@@ -1,0 +1,26 @@
+.ticker {
+  padding: 140px 0;
+ @include tablet{
+    padding: 70px 0;
+ }
+ @include mobile{
+    padding: 40px 0;
+ }
+  &__slide-text {
+    font-family: var(--second-font);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .ticker__slide-tex:nth-child(2) {
+    color: var(--main-color-1);
+  }
+  .ticker__slide-inner:nth-child(odd) {
+    color: var(--main-color-2);
+  }
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important;
+  }
+}

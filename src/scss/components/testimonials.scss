@@ -1,28 +1,27 @@
 .testimonials {
-  .container{
+  .container {
     max-width: 1280px;
     padding: 0;
   }
   padding: 93px 0;
-    @include small-tablet{
-      padding: 40px 0;
-    }
+  @include small-tablet {
+    padding: 40px 0;
+  }
   margin: 0 auto;
   background: url('./../assets/content/images/testi-background.jpg') no-repeat
     center;
   &__container {
     @include flex-column;
-    
   }
 
   &__upper {
     display: flex;
     margin-left: 100px;
     gap: 30px;
-    @include tablet{
+    @include tablet {
       margin-left: 50px;
     }
-    @include small-tablet{
+    @include small-tablet {
       flex-direction: column;
       margin-left: 0;
       align-items: center;
@@ -35,7 +34,7 @@
     font-weight: 400;
     color: var(--main-color-3);
     max-width: 293px;
-    @include small-tablet{
+    @include small-tablet {
       max-width: none;
     }
   }
@@ -48,20 +47,19 @@
     line-height: 1.42;
   }
 
- 
-  &__swiper{
+  &__swiper {
     margin-left: 294px;
     position: relative;
-    @include tablet{
+    @include tablet {
       margin-left: 244px;
     }
-    @include small-tablet{
+    @include small-tablet {
       margin-left: 50px;
     }
-    @include small-mobile{
+    @include small-mobile {
       margin-left: 25px;
     }
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       top: 65px;
@@ -74,12 +72,11 @@
       box-shadow: -10px 0px 45px 18px rgba(0, 0, 0, 0.63);
     }
   }
-  &__swiper-wrapper{
+  &__swiper-wrapper {
     padding-top: 47px;
     padding-bottom: 87px;
   }
   .swiper-scrollbar {
-   
     background: rgba(246, 247, 242, 0.3);
     max-width: 714px;
     width: 100%;
@@ -87,19 +84,19 @@
     border-radius: 24px;
     display: flex;
     align-items: center;
-    @include tablet{
+    @include tablet {
       max-width: 514px;
     }
-    @include mobile{
+    @include mobile {
       max-width: 350px;
     }
-    @media screen and (max-width: 410px){
+    @media screen and (max-width: 410px) {
       max-width: 300px;
     }
-    @include small-mobile{
+    @include small-mobile {
       max-width: 250px;
     }
-    .swiper-scrollbar-drag{
+    .swiper-scrollbar-drag {
       background: var(--main-color-3);
       height: 2px;
       border-radius: 24px;
@@ -112,9 +109,15 @@
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     background: var(--main-color-3);
     max-width: 260px;
-    @include small-mobile{
+    max-height: 300px;
+    cursor: pointer;
+    @include small-mobile {
       max-width: 210px;
-      
+    }
+    &:hover {
+      .testimonials__slide-text {
+        overflow: visible;
+      }
     }
   }
 
@@ -154,6 +157,12 @@
     line-height: 1.42;
     color: var(--main-color-2);
     margin-bottom: 68px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: overflow var(--transisiton);
   }
 
   &__slide-author {

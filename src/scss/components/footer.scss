@@ -1,7 +1,9 @@
 .footer {
   padding: 60px 0;
   background: var(--main-color-2);
-
+  @include tablet{
+        padding: 40px 0;
+  }
   &__container {
     @include flex-align-center;
     justify-content: space-between;
@@ -41,6 +43,9 @@
   &__contacts {
     @include flex-column;
     gap: 24px;
+    @include mobile{
+        gap: 35px;
+    }
   }
   &__contacts-title {
     font-family: var(--second-font);
@@ -51,6 +56,7 @@
     @include tablet{
         text-align: center;
     }
+    
   }
   &__contacts-list {
     @include flex-align-center;
@@ -58,6 +64,7 @@
     @include mobile{
         flex-direction: column;
         align-items: start;
+        gap: 30px;
     }
   }
 

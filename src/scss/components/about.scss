@@ -1,7 +1,11 @@
 .about {
   padding: 61px 0;
   background: var(--main-color-2);
-
+  &__container{
+    @include mobile{
+      padding: 0 30px;
+    }
+  }
   @include small-tablet{
     padding: 40px 0;
   }

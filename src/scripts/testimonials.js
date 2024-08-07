@@ -5,9 +5,9 @@ import 'swiper/css';
 
 const testimonialsSwiper = new Swiper('.testimonials__swiper',{
     modules: [Autoplay, Scrollbar],
-    slidesPerView: 1.2,
+    slidesPerView: 1,
     spaceBetween: 35,
-    slidesPerGroup: 3,
+    slidesPerGroup: 1,
     scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,

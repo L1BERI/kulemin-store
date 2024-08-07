@@ -1,12 +1,17 @@
 .hero {
   padding-top: 44px;
   padding-bottom: 108px;
-
+  
   @include tablet {
     padding: 22px 0 40px;
   }
 
-  
+  &__container{
+    @include mobile{
+      padding: 0 20px;
+      padding-top: 70px;
+    }
+  }
  
 
   &__upper {

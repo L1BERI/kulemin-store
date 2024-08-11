@@ -20,7 +20,7 @@ const tickerSwiper = new Swiper('.ticker__swiper', {
   slidesPerView: 1,
   speed: 3000,
   spaceBetween: 50,
-  
+  simulateTouch: false,
   autoplay: {
     delay: 0,
   },

@@ -1,30 +1,28 @@
 .hero {
   padding-top: 44px;
   padding-bottom: 108px;
-  
+
   @include tablet {
     padding: 22px 0 40px;
   }
 
-  &__container{
-    @include mobile{
+  &__container {
+    @include mobile {
       padding: 0 20px;
       padding-top: 70px;
     }
   }
- 
 
   &__upper {
     background: url('../assets/content/images/hero-background.jpg') no-repeat;
     position: relative;
-    z-index: var(--z-index-3);
+    z-index: var(--z-index-2);
     padding: 100px 72px 100px;
     border-radius: 30px 30px 300px 30px;
     overflow: hidden;
     @include flex-align-center;
-    @include tablet{
+    @include tablet {
       border-radius: 30px 30px 30px 30px;
-      
     }
     @include mobile {
       padding: 70px 30px 70px;
@@ -75,14 +73,14 @@
     display: flex;
     padding-top: 137px;
     gap: 50px;
-    @include tablet{
+    @include tablet {
       flex-direction: column;
       align-items: center;
     }
-    @include small-tablet{
+    @include small-tablet {
       padding-top: 80px;
     }
-    @include mobile{
+    @include mobile {
       padding-top: 40px;
     }
   }
@@ -90,11 +88,11 @@
   &__bottom-cards-list {
     display: flex;
     gap: 12px;
-    @include tablet{
+    @include tablet {
       gap: 40px;
     }
 
-    @include small-tablet{
+    @include small-tablet {
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
@@ -120,51 +118,50 @@
       left: 50%;
       z-index: 2;
       transform: translateX(-50%);
-      @include small-tablet{
+      @include small-tablet {
         display: none;
       }
     }
 
     &:nth-child(2) {
       margin-top: 100px;
-      @include small-tablet{
+      @include small-tablet {
         margin-top: 0;
       }
       &::before {
         height: 260px;
         top: -239px;
       }
-     
     }
 
-    &:last-child{
-      &::before{
-        @include tablet{
+    &:last-child {
+      &::before {
+        @include tablet {
           height: 170px;
-          top: -147px
+          top: -147px;
         }
       }
     }
 
     &:hover {
       transform: translateY(-20px);
+      @include mobile {
+        transform: none;
+      }
     }
-
-  
   }
 
-  
+
   .first-swiper-cards,
   .second-swiper-cards,
-  .thirst-swiper-cards{
+  .thirst-swiper-cards {
     overflow: visible;
-    
   }
-  .cards-wrapper-swiper{
+  .cards-wrapper-swiper {
     box-sizing: border-box;
   }
   &__bottom-cards-desc,
-  &__bottom-cards-content{
+  &__bottom-cards-content {
     @include flex-column;
     align-items: center;
     padding: 19px;
@@ -174,12 +171,10 @@
     transition-property: all;
     border-radius: 30px;
     cursor: pointer;
-    
   }
-  
 
   .swiper-3d .swiper-slide-shadow-left,
-  .swiper-3d .swiper-slide-shadow-right{
+  .swiper-3d .swiper-slide-shadow-right {
     background: none;
   }
 
@@ -190,7 +185,7 @@
     25% {
       transform: translateY(0px);
     }
-    
+
     35% {
       transform: translateY(-70px);
     }
@@ -219,8 +214,8 @@
     color: var(--main-color-2);
     max-width: 211px;
   }
-  &__bottom-cards-desc{
-    .cards-circle{
+  &__bottom-cards-desc {
+    .cards-circle {
       margin-bottom: 22px;
     }
   }
@@ -231,7 +226,6 @@
     font-size: 12px;
     letter-spacing: 0.05em;
     color: var(--main-color-2);
-  
   }
   &__bottom-cards-title,
   &__bottom-info-title,

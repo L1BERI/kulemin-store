@@ -43,6 +43,7 @@
   &__contacts {
     @include flex-column;
     gap: 24px;
+    align-items: center;
     @include mobile{
         gap: 35px;
     }
@@ -60,6 +61,7 @@
   }
   &__contacts-list {
     @include flex-align-center;
+    
     gap: 55px;
     @include mobile{
         flex-direction: column;
@@ -75,26 +77,29 @@
     letter-spacing: 0.05em;
     line-height: 1.42;
     color: var(--main-color-3);
+    position: relative;
     @include flex-align-center;
+   
     gap: 12px;
 
     span{
-        opacity: 1;
-        visibility: visible;
-        transition: opacity var(--transition), visibility var(--transition);
-    }
-    svg{
-        transform: translateX(0%);
-        transition:  transform var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      transition: opacity var(--transition), visibility var(--transition), left var(--transition);
+      
     }
     &:hover{
-        span{
-            opacity: 0;
-            visibility: hidden;
-        }
-        svg{
-            transform: translateX(150%);
-        }
+      svg{
+        transform: translateX(-100px);
+      }
+      span{
+        left: -60px;
+          opacity: 1;
+          visibility: visible;
     }
+    }
+    
+    
   }
 }

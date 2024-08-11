@@ -48,6 +48,7 @@
       color: var(--main-color-3);
       border-bottom: 1px solid #f6f7f2;
       background: transparent;
+      border-radius: 0;
       &::placeholder {
         opacity: 0;
         transition: opacity var(--transition);
@@ -62,7 +63,6 @@
     label {
       @include flex-column;
       position: relative;
-      pointer-events: stroke;
       font-family: var(--main-font);
       font-weight: 600;
       font-size: 14px;
@@ -72,6 +72,7 @@
         top: 0px;
         transition: top var(--transition);
         white-space: nowrap;
+        z-index: -1;
       }
 
       input:focus ~ span {

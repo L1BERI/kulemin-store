@@ -64,6 +64,9 @@ window.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseout', function(){
             el.classList.remove('card-active')
         })
+        el.addEventListener('click', function(){
+          el.classList.toggle('card-active')
+        })
     });
     
   });

@@ -7,11 +7,23 @@ export const burgerOpen = () => {
     burgerMenu.classList.remove('burger-active');
     burgerList.classList.remove('burger-open');
     burgerOverlay.classList.remove('overlay-visible');
+    document.body.classList.remove('scroll-hidden')
   }
-
-  burgerMenu.addEventListener('click', () => {
+  document.body.addEventListener('click', (e) =>{
+    
+    if(e.target == burgerOverlay){
+      burgerMenu.classList.remove('burger-active');
+      burgerList.classList.remove('burger-open');
+      document.body.classList.remove('scroll-hidden')
+      burgerOverlay.classList.remove('overlay-visible');
+    }
+  })
+  burgerMenu.addEventListener('click', (e) => {
     burgerMenu.classList.toggle('burger-active');
     burgerList.classList.toggle('burger-open');
     burgerOverlay.classList.toggle('overlay-visible');
+    document.body.classList.toggle('scroll-hidden')
+    
   });
+  
 };

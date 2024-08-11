@@ -91,10 +91,10 @@
     }
     &:hover{
       svg{
-        transform: translateX(-100px);
+        transform: translateY(40px);
       }
       span{
-        left: -60px;
+     left: 50%;
           opacity: 1;
           visibility: visible;
     }

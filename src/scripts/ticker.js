@@ -21,6 +21,8 @@ const tickerSwiper = new Swiper('.ticker__swiper', {
   speed: 3000,
   spaceBetween: 50,
   simulateTouch: false,
+  allowTouchMove: false,
+  draggable: false,
   autoplay: {
     delay: 0,
   },

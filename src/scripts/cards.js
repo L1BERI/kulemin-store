@@ -70,7 +70,7 @@ const swiperSecond = new Swiper('.second-swiper-cards', {
     modules: [EffectFlip, Autoplay],
     effect: 'flip',
     speed: 1000,
-    loop: true,
+    loop: false,
     simulateTouch: true,
     allowTouchMove: true,
     breakpoints: {

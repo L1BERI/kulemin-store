@@ -19,7 +19,7 @@
     overflow: hidden;
     gap: 92px;
     @include tablet {
-      padding: 50px 50px 70px 50px;
+      padding: 70px 50px 70px 50px;
       gap: 40px;
     }
     @include small-tablet {

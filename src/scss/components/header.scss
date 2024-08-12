@@ -15,7 +15,7 @@
     color: var(--main-color-2);
     @include tablet{
       position: fixed;
-      // height: 70px;
+      height: 70px;
       padding: 30px 15px;
       z-index: 3;
       right: 0;

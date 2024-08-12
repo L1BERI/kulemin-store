@@ -17,8 +17,19 @@ export const burgerOpen = () => {
       document.body.classList.remove('scroll-hidden')
       burgerOverlay.classList.remove('overlay-visible');
     }
+
+   
+
+    if(e.target.closest('[data-menu-burger]')) {
+     
+      burgerMenu.classList.remove('burger-active');
+      burgerList.classList.remove('burger-open');
+      document.body.classList.remove('scroll-hidden')
+      burgerOverlay.classList.remove('overlay-visible');
+    }
   })
   burgerMenu.addEventListener('click', (e) => {
+    e.preventDefault();
     burgerMenu.classList.toggle('burger-active');
     burgerList.classList.toggle('burger-open');
     burgerOverlay.classList.toggle('overlay-visible');

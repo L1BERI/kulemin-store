@@ -8,6 +8,9 @@ export const burgerOpen = () => {
     burgerList.classList.remove('burger-open');
     burgerOverlay.classList.remove('overlay-visible');
     document.body.classList.remove('scroll-hidden')
+    document.body.addEventListener('touchmove', function(){
+      e.stopPropagation();
+    })
   }
   document.body.addEventListener('click', (e) =>{
     
@@ -16,6 +19,9 @@ export const burgerOpen = () => {
       burgerList.classList.remove('burger-open');
       document.body.classList.remove('scroll-hidden')
       burgerOverlay.classList.remove('overlay-visible');
+      document.body.addEventListener('touchmove', function(){
+        e.stopPropagation();
+      })
     }
 
    
@@ -26,6 +32,9 @@ export const burgerOpen = () => {
       burgerList.classList.remove('burger-open');
       document.body.classList.remove('scroll-hidden')
       burgerOverlay.classList.remove('overlay-visible');
+      document.body.addEventListener('touchmove', function(){
+        e.stopPropagation();
+      })
     }
   })
   burgerMenu.addEventListener('click', (e) => {
@@ -34,7 +43,9 @@ export const burgerOpen = () => {
     burgerList.classList.toggle('burger-open');
     burgerOverlay.classList.toggle('overlay-visible');
     document.body.classList.toggle('scroll-hidden')
-    
+    document.body.addEventListener('touchmove', function(){
+      e.preventDefault();
+    })
   });
   
 };

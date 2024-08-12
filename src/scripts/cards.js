@@ -72,12 +72,12 @@ const swiperSecond = new Swiper('.second-swiper-cards', {
     speed: 1000,
     loop: false,
     simulateTouch: true,
-    allowTouchMove: true,
+    allowTouchMove: false,
+    
     breakpoints: {
       992:{
           allowTouchMove: false,
           loop: false,
-          simulateTouch: false,
       }
     },
     autoplay:{

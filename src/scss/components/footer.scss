@@ -78,7 +78,8 @@
     color: var(--main-color-3);
     position: relative;
     @include flex-align-center;
-
+    position: relative;
+   
     gap: 12px;
 
     span {
@@ -100,6 +101,10 @@
         top: 0;
       }
     }
+    svg{
+      width: 28px;
+      height: 28px;
+    }
     svg path{
       transition: fill var(--transition);
     }
@@ -118,4 +123,5 @@
       }
     }
   }
+ 
 }

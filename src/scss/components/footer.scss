@@ -1,15 +1,15 @@
 .footer {
   padding: 60px 0;
   background: var(--main-color-2);
-  @include tablet{
-        padding: 40px 0;
+  @include tablet {
+    padding: 40px 0;
   }
   &__container {
     @include flex-align-center;
     justify-content: space-between;
-    @include tablet{
-        gap: 50px;
-        flex-direction: column;
+    @include tablet {
+      gap: 50px;
+      flex-direction: column;
     }
   }
   &__information {
@@ -23,8 +23,8 @@
     letter-spacing: 0.05em;
     line-height: 1.25;
     color: var(--main-color-3);
-    @include tablet{
-        text-align: center;
+    @include tablet {
+      text-align: center;
     }
   }
 
@@ -35,8 +35,8 @@
     letter-spacing: 0.05em;
     line-height: 1.42;
     color: var(--main-color-3);
-    @include tablet{
-        text-align: center;
+    @include tablet {
+      text-align: center;
     }
   }
 
@@ -44,8 +44,8 @@
     @include flex-column;
     gap: 24px;
     align-items: center;
-    @include mobile{
-        gap: 35px;
+    @include mobile {
+      gap: 35px;
     }
   }
   &__contacts-title {
@@ -54,19 +54,18 @@
     font-size: 16px;
     letter-spacing: 0.05em;
     color: var(--main-color-3);
-    @include tablet{
-        text-align: center;
+    @include tablet {
+      text-align: center;
     }
-    
   }
   &__contacts-list {
     @include flex-align-center;
-    
+
     gap: 55px;
-    @include mobile{
-        flex-direction: column;
-        align-items: start;
-        gap: 30px;
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      gap: 30px;
     }
   }
 
@@ -79,27 +78,44 @@
     color: var(--main-color-3);
     position: relative;
     @include flex-align-center;
-   
+
     gap: 12px;
 
-    span{
+    span {
       opacity: 0;
       visibility: hidden;
       position: absolute;
-      transition: opacity var(--transition), visibility var(--transition), left var(--transition);
-      
-    }
-    &:hover{
-      svg{
-        transform: translateY(40px);
+      left: -65%;
+      top: 0;
+      transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        left var(--transition),
+        top var(--transition);
+      @include tablet {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        left: 0;
+        top: 0;
       }
-      span{
-     left: 50%;
-          opacity: 1;
-          visibility: visible;
     }
+    svg path{
+      transition: fill var(--transition);
     }
-    
-    
+    &:hover {
+      span {
+        opacity: 1;
+        visibility: visible;
+        top: 30px;
+        
+        @include mobile {
+          top: 0;
+        }
+      }
+      svg path{
+        fill:var(--main-color-1);
+      }
+    }
   }
 }

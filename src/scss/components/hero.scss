@@ -74,11 +74,12 @@
     padding-top: 137px;
     gap: 50px;
     @include tablet {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
     @include small-tablet {
       padding-top: 80px;
+      gap: 15px;
     }
     @include mobile {
       padding-top: 40px;
@@ -88,14 +89,13 @@
   &__bottom-cards-list {
     display: flex;
     gap: 12px;
+    
     @include tablet {
       gap: 40px;
     }
 
     @include small-tablet {
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: none;
     }
   }
 
@@ -150,7 +150,6 @@
       }
     }
   }
-
 
   .first-swiper-cards,
   .second-swiper-cards,
@@ -253,5 +252,89 @@
     font-weight: 400;
     letter-spacing: 0.05em;
     line-height: 1.42;
+  }
+
+  &__bottom-accordeon {
+    display: none;
+    @include small-tablet {
+      display: flex;
+      gap: 15px;
+      .hero__bottom-accordeon-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      &-item {
+        color: var(--main-color-2);
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 24px;
+        padding: 20px;
+        cursor: pointer;
+      }
+
+      .hero__bottom-accordeon-item-title {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        position: relative;
+        &::before {
+          content: '▼';
+          font-size: 24px;
+          font-weight: bold;
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all var(--transition);
+          transform-origin: center center;
+        }
+      }
+
+      .accordeon-active .hero__bottom-accordeon-item-title::before {
+        
+        transform: translateY(-50%) rotate(180deg);
+     
+      }
+      .hero__bottom-accordeon-item-title-text {
+        font-family: var(--second-font);
+        font-size: 18px;
+        padding-right: 30px;
+        @include mobile{
+          font-size: 16px;
+        }
+        @include mobile{
+          font-size: 14px;
+        }
+      }
+      .hero__bottom-accordeon-item-content {
+        padding-left: 78px;
+        padding-right: 30px;
+        transition:
+          height var(--transition),
+          padding-top var(--transition);
+        height: 0;
+        overflow: hidden;
+        @include mobile{
+          padding-left: 30px;
+          padding-right: 0;
+        }
+      }
+
+      .accordeon-active .hero__bottom-accordeon-item-content {
+        padding-top: 20px;
+      }
+
+      .hero__bottom-accordeon-item-text {
+        font-family: var(--main-font);
+        font-size: 16px;
+        line-height: 1.42;
+        @include mobile{
+          font-size: 14px;
+        }
+        @include mobile{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

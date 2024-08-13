@@ -2,14 +2,16 @@
   padding-bottom: 140px;
   padding-left: 15px;
   padding-right: 15px;
+  @include tablet{
+    padding-bottom: 40px;
+  }
   @include mobile {
       padding-left: 0px;
       padding-right: 0px;
+      padding-bottom: 0;
     
   }
-  @include tablet{
-    padding-bottom: 0;
-  }
+  
   &__container {
     @include flex-align-center;
     background: url('./../assets/content/images/order-background.jpg') no-repeat;

@@ -10,9 +10,6 @@ const swiperFirst = new Swiper('.first-swiper-cards', {
     loop: true,
     simulateTouch: true,
     allowTouchMove: true,
-    flipEffect: {
-        limitRotation: false,
-    },
     breakpoints: {
       992:{
           allowTouchMove: false,
@@ -76,9 +73,7 @@ const swiperSecond = new Swiper('.second-swiper-cards', {
     loop: false,
     simulateTouch: true,
     allowTouchMove: false,
-    flipEffect: {
-        limitRotation: false,
-    },
+    
     breakpoints: {
       992:{
           allowTouchMove: false,
@@ -98,9 +93,6 @@ const swiperThirst = new Swiper('.thirst-swiper-cards', {
     loop: true,
     simulateTouch: true,
     allowTouchMove: true,
-    flipEffect: {
-        limitRotation: false,
-    },
     breakpoints: {
       992:{
           allowTouchMove: false,
@@ -114,5 +106,25 @@ const swiperThirst = new Swiper('.thirst-swiper-cards', {
   }
 });
 
+
+
+const accordeonItems = document.querySelectorAll('.hero__bottom-accordeon-item')
+
+accordeonItems.forEach(el => {
+    const accordeonContent = el.querySelector('.hero__bottom-accordeon-item-content')
+    const accordeonText = el.querySelector('.hero__bottom-accordeon-item-text')
+    accordeonContent.style.height = 0;
+    el.addEventListener('click', function(e){
+       if(e.target.closest('.hero__bottom-accordeon-item')){
+        el.classList.toggle('accordeon-active');
+       }
+       if(el.classList.contains('accordeon-active')){
+        accordeonContent.style.height = accordeonText.clientHeight + 20 + 'px'
+       } else {
+        accordeonContent.style.height = 0;
+       }
+
+    })
+});
 
 

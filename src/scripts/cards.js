@@ -10,6 +10,9 @@ const swiperFirst = new Swiper('.first-swiper-cards', {
     loop: true,
     simulateTouch: true,
     allowTouchMove: true,
+    flipEffect: {
+        limitRotation: false,
+    },
     breakpoints: {
       992:{
           allowTouchMove: false,
@@ -73,7 +76,9 @@ const swiperSecond = new Swiper('.second-swiper-cards', {
     loop: false,
     simulateTouch: true,
     allowTouchMove: false,
-    
+    flipEffect: {
+        limitRotation: false,
+    },
     breakpoints: {
       992:{
           allowTouchMove: false,
@@ -93,6 +98,9 @@ const swiperThirst = new Swiper('.thirst-swiper-cards', {
     loop: true,
     simulateTouch: true,
     allowTouchMove: true,
+    flipEffect: {
+        limitRotation: false,
+    },
     breakpoints: {
       992:{
           allowTouchMove: false,
